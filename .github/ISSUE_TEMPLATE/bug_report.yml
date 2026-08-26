@@ -1,0 +1,62 @@
+name: Bug report
+description: Report a reproducible LedgerLens defect using Demo data only
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve LedgerLens.
+
+        **Never attach a real credential, token, account number, portfolio export, database, or live-account screenshot.** Reproduce the issue in Demo mode or replace every private value with an unmistakably fictional one. Report security issues through GitHub's private security-advisory channel, not this form.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the defect and the result you expected.
+      placeholder: In Demo mode, when I ...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      description: Provide the smallest deterministic Demo-mode reproduction.
+      placeholder: |
+        1. Run npm ci and npm run dev
+        2. Open ...
+        3. Select ...
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Revision
+      description: Commit SHA, release, or branch where the problem occurs.
+      placeholder: main at abc1234
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Node.js version, browser, and LedgerLens runtime mode.
+      placeholder: Windows 11, Node 22.23.2, Edge 140, Demo
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence
+      description: Add logs or Demo-only screenshots after removing all private data.
+      render: shell
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: I verified that this report contains no real secret, account data, portfolio export, database, or live screenshot.
+          required: true
+        - label: This report does not request or add order creation, modification, cancellation, or an arbitrary upstream proxy.
+          required: true

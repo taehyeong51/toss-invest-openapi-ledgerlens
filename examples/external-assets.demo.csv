@@ -1,0 +1,4 @@
+kind,name,institution,currency,balance,valueKrw,valuedAt,maturityDate,annualRatePercent,note
+cash,[DEMO] 비상금,샘플 은행,KRW,5000000,5000000,2026-01-31,,,가상 데이터
+deposit,[DEMO] 정기예금,샘플 은행,KRW,12000000,12000000,2026-01-31,2027-01-31,3.2,가상 데이터
+pension,[DEMO] 개인연금,샘플 증권,KRW,8000000,8000000,2026-01-31,,,가상 데이터

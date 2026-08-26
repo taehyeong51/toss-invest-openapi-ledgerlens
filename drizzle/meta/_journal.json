@@ -1,0 +1,55 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1786086456622,
+      "tag": "0000_flimsy_mole_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1786090073397,
+      "tag": "0001_wakeful_havok",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1786090967957,
+      "tag": "0002_polite_magneto",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1786094949329,
+      "tag": "0003_overconfident_the_spike",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1787098233148,
+      "tag": "0004_faulty_sphinx",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1787113240209,
+      "tag": "0005_redundant_tattoo",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1787625827605,
+      "tag": "0006_whole_asset_ledger",
+      "breakpoints": true
+    }
+  ]
+}

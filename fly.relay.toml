@@ -1,0 +1,37 @@
+primary_region = "nrt"
+kill_signal = "SIGTERM"
+kill_timeout = 30
+
+[build]
+  dockerfile = "Dockerfile.relay"
+
+[env]
+  NODE_ENV = "production"
+  TOSS_DIRECT_API_ENABLED = "true"
+  RELAY_APP_HOST = "127.0.0.1"
+  RELAY_APP_PORT = "3000"
+  RELAY_GATEWAY_HOST = "0.0.0.0"
+  RELAY_GATEWAY_PORT = "8080"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  # Fly creates two Machines on a service app's first deploy unless the
+  # operator uses `fly deploy --ha=false`. LedgerLens must stay at one process
+  # because Toss permits only one active OAuth token per client.
+  auto_stop_machines = "off"
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ["app"]
+
+  [[http_service.checks]]
+    grace_period = "20s"
+    interval = "30s"
+    method = "GET"
+    timeout = "5s"
+    path = "/healthz"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "512mb"

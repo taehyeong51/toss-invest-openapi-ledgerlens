@@ -1,0 +1,64 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/.vinext/
+/out/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+.dev.vars*
+
+# vercel
+.vercel
+
+/dist/
+/.wrangler/
+/outputs/
+/work/
+/.npm-cache/
+/.codex-dev.*
+*.tsbuildinfo
+
+# Local design audit captures may contain private portfolio screenshots.
+/.impeccable/
+
+# OpenAI Sites project metadata is owner-specific. Use the public example as a
+# template and keep the real resource identifier local.
+/.openai/hosting.json
+
+# Private financial exports and local databases/credentials.
+/exports/
+/private-data/
+ledgerlens-external-assets*.csv
+*.private.csv
+*.db
+*.sqlite
+*.sqlite-*
+*.key
+*.p12
+*.pfx
