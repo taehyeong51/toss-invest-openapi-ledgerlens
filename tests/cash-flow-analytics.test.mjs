@@ -470,7 +470,7 @@ test("Phase 3 storage is exact, indexed, immutable, and no-store", async () => {
       readFile(new URL("../app/api/cash-flows/route.ts", import.meta.url), "utf8"),
       readFile(new URL("../app/api/analytics/route.ts", import.meta.url), "utf8"),
       readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
-      readFile(new URL("../README.ko.md", import.meta.url), "utf8"),
+      readFile(new URL("../README.md", import.meta.url), "utf8"),
       readdir(new URL("../drizzle/", import.meta.url)),
     ]);
   const sqlNames = migrationNames.filter((name) => name.endsWith(".sql")).sort();

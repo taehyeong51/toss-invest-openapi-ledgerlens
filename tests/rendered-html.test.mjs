@@ -27,7 +27,10 @@ test("server-renders the LedgerLens read-only product shell", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>LedgerLens \| 내 자산 한눈에 보기<\/title>/);
+  assert.match(
+    html,
+    /<title>LedgerLens \| 토스증권 Open API 자산관리 대시보드<\/title>/,
+  );
   assert.match(html, /data-design-direction="asset-console"/);
   assert.match(html, /data-theme="light"/);
   assert.match(html, />대시보드<\/button>/);

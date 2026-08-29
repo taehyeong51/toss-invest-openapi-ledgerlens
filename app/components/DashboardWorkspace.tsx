@@ -523,7 +523,7 @@ export function DashboardWorkspace({
     <div className="asset-dashboard">
       <section className="dashboard-hero" aria-labelledby="dashboard-title">
         <div className="dashboard-hero-copy">
-          <span className="dashboard-eyebrow">WHOLE ASSET OVERVIEW</span>
+          <span className="dashboard-eyebrow">토스증권 OPEN API · READ ONLY</span>
           <h1 id="dashboard-title" tabIndex={-1}><span>LedgerLens</span> 자산 포트폴리오</h1>
           <p>{portfolio.account.maskedNumber} · {formatAsOf(portfolio.asOf)} 기준</p>
         </div>

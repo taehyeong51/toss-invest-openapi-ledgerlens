@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 
-const title = "LedgerLens | 내 자산 한눈에 보기";
+const title = "LedgerLens | 토스증권 Open API 자산관리 대시보드";
 const description =
-  "증권 계좌와 수동 등록 자산을 한 화면에서 확인하고 성장 흐름, 자산 배분과 손익 근거를 검토하는 읽기 전용 자산관리 워크스페이스.";
+  "토스증권 Open API로 국내·미국 주식, ETF, 매수 가능 금액과 환율을 동기화하고 수동 등록 자산까지 함께 관리하는 읽기 전용 오픈소스 자산관리 대시보드.";
 
 const themeBootScript = `(() => {
   try {
@@ -37,11 +37,21 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(origin),
     title,
     description,
+    applicationName: "LedgerLens",
+    category: "finance",
+    creator: "LedgerLens contributors",
+    publisher: "LedgerLens contributors",
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       type: "website",
+      locale: "ko_KR",
+      siteName: "LedgerLens",
       title,
       description,
-      images: [{ url: imageUrl, width: 1536, height: 1024, alt: "LedgerLens 자산 검토 워크스페이스" }],
+      images: [{ url: imageUrl, width: 1536, height: 1024, alt: "토스증권 Open API 기반 LedgerLens 자산관리 대시보드" }],
     },
     twitter: {
       card: "summary_large_image",
